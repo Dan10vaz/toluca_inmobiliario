@@ -1,0 +1,26 @@
+{
+    "name": "TGI",
+    "short_name": "TGI",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#7CFC00",
+    "theme_color": "#7CFC00",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "build/img/icono/icons8-houses-48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "build/img/icono/icons8-houses-96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "build/img/icono/icons8-houses-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}
