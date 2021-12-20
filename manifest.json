@@ -1,10 +1,10 @@
 {
-    "name": "TGI",
-    "short_name": "TGI",
+    "name": "TOLUCA GRUPO INMOBILIARIO",
+    "short_name": "TOLUCA GRUPO INMOBILIARIO",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#7CFC00",
-    "theme_color": "#7CFC00",
+    "background_color": "#3769d6",
+    "theme_color": "#3769d6",
     "orientation": "portrait",
     "icons": [
         {

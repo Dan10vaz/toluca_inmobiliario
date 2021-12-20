@@ -38,11 +38,16 @@
     <main class="contenedor seccion contenido-centrado">
         <h1>Casa en venta</h1>
 
-        <picture>
-            <source srcset="build/img/destacada.webp" type="image/webp">
-            <source srcset="build/img/destacada.jpg" type="image/jpeg">
-            <img loading="lazy" src="build/img/destacada.webp" alt="imagen de la propiedad">
-        </picture>
+        <div class="contenedor-slider">
+            <div class="slider" id="slider">
+                <div class="slider__section"><img src="build/img/anuncio1.jpg" alt="Primera" class="slider__img"></div>
+                <div class="slider__section"><img src="build/img/anuncio2.jpg" alt="Segunda" class="slider__img"></div>
+                <div class="slider__section"><img src="build/img/anuncio3.jpg" alt="Tercera" class="slider__img"></div>
+                <div class="slider__section"><img src="build/img/anuncio4.jpg" alt="Cuarta" class="slider__img"></div>
+            </div>
+            <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+            <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+        </div>
 
         <div class="resumen-propiedad">
             <p class="precio">$3,000,000</p>

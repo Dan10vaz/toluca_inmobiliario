@@ -1,9 +1,10 @@
 .no-webp .inicio {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/torre.jpg);
 }
 .webp .inicio {
-    background-image: url(../img/header.webp);
+    background-image: url(../img/torre.webp);
 }
+
 .header{
     background-color: $grisOscuro;
     padding: 1rem 0 3rem 0;
@@ -27,13 +28,13 @@
     flex-direction: column;
     justify-content: space-between;
 
-    
-
     h1{
         text-align: left;
         color: $blanco;
-        font-weight: $bold;
-        line-height: 2;
+        font-weight: $black;
+        line-height: 1;
         max-width: 60rem;
     }
+
 }
+
