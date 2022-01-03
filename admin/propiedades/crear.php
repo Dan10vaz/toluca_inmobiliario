@@ -88,25 +88,24 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         //SUBIDA DE ARCHIVOS 
         //Crear una carpeta
-        $carpetaImagenes = '../../imagenes';
+        $carpetaImagenes = '../../imagenes/';
         if(!is_dir($carpetaImagenes)) {
             mkdir($carpetaImagenes);
         }
 
-        //Subir la imagen 
+        //Generar un nombre unico 
+        $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
 
-        move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/archivo.jpg");
-        
-        exit;
+        //Subir la imagen 
+        move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
         
         //Insertar en la base de datos 
-        $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamiento, creado, vendedorId ) VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId')";
+        $query = "INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedorId ) VALUES ('$titulo', '$precio', '$nombreImagen', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId')";
         //Almacenar en la base de datos
         $resultado = mysqli_query($db, $query);
         if ($resultado) {
             // Redireccionar al usuario 
-
-            header('Location: /admin');
+            header('Location: /admin?resultado=1');
         }
     }
 }
@@ -139,7 +138,7 @@ incluirTemplate('header');
             <input type="number" id="precio" name="precio" placeholder="Precio Propiedad" value="<?php echo $precio?>">
 
             <label for="imagen">Imagenes:</label>
-            <input type="file" id="imagen" name="imagen" accept="image/jpeg, image/png" name="imagen">
+            <input type="file" id="imagen" name="imagen" accept="image/jpeg, image/png" name="imagen" multiple="multiple">
 
             <label for="descripcion">Descripción:</label>
             <textarea id="descripcion" name="descripcion"><?php echo $descripcion; ?></textarea>

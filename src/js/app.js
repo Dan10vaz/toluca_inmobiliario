@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     darkMode();
 
+    serviceWorker();
+
     slider();
 
-    serviceWorker();
+    
 
 });
 
