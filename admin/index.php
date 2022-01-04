@@ -1,11 +1,19 @@
 <?php
 
+require '../includes/funciones.php';
+$auth =  estaAutenticado();
+
+if(!$auth) {
+    header('Location: /');
+}
+
 //Importar la coneccion 
 require '../includes/config/database.php';
 $db = conectarDB();
 
 //Escribir el Query
 $query = "SELECT * FROM propiedades";
+
 //Consultar la base de datos
 $resultadoConsulta = mysqli_query($db, $query);
 
@@ -36,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 //Incluye un template
-require '../includes/funciones.php';
+
 incluirTemplate('header');
 ?>
 

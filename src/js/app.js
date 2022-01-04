@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     eventListeners();
+    
+    serviceWorker();
 
     darkMode();
-
-    serviceWorker();
 
     slider();
 
