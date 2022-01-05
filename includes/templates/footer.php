@@ -5,7 +5,7 @@
             <a href="anuncios.php">Anuncios</a>
             <a href="blog.php">Blog</a>
             <a href="contacto.php">Contacto</a>
-            <a href=""><img src="/build/img/facebook_logo.png" class="facebook" alt="Facebook"></a>
+            <a href="https://www.facebook.com/Toluca-Grupo-Inmobiliario-102254578535558/"><img src="/build/img/facebook_logo.png" class="facebook" alt="Facebook"></a>
         </nav>
     </div>
 

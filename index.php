@@ -10,7 +10,7 @@ incluirTemplate('header', $inicio = true);
         <div class="icono">
             <img src="build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
             <h3>Seguridad</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, pariatur! Error, quas eligendi magnam similique sapiente suscipit doloremque dignissimos repudiandae hic necessitatibus vitae nihil eius minima iure provident aliquam beatae.</p>
+            <p>Ahora que estás buscando <B>comprar casa o departamento</B>, es importante que cuides tu patrimonio realizando una compra de forma <B>segura</B> . Comprar casa además de ser una de las <B>decisiones más importantes en la vida</B> de cada persona, también es un proceso que puede generar estrés y un sin fin de dudas. Esto lo puedes evitar siguiendo las medidas que <B>nosotros</B> te proporcionamos para comprar fácil y seguro .</p>
         </div>
 
         <div class="icono">
