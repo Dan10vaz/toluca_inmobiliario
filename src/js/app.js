@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     darkMode();
 
+    sliderHeader();
+
     slider();
 
     
@@ -101,3 +103,20 @@ function navegacionResponsive(){
     navegacion.classList.toggle('mostrar');
 }
 
+function sliderHeader() {
+    const headerInicio = document.querySelector('.inicio');
+    headerInicio.style.backgroundImage = "url('/build/img/header2.jpeg')";
+
+    setInterval(() => {
+       headerInicio.style.backgroundImage = "url('/build/img/header1.jpeg')";
+    }, 5000);
+    setInterval(() => {
+        headerInicio.style.backgroundImage = "url('/build/img/header3.jpeg')";
+     }, 10000);
+     setInterval(() => {
+        headerInicio.style.backgroundImage = "url('/build/img/header4.jpeg')";
+     }, 15000);
+     setInterval(() => {
+        headerInicio.style.backgroundImage = "url('/build/img/header2.jpeg')";
+     }, 20000);
+}
