@@ -1,16 +1,13 @@
+serviceWorker();
 document.addEventListener('DOMContentLoaded', function() {
 
     eventListeners();
-
-    serviceWorker();
-
+  
     darkMode();
 
-    sliderHeader();
+    header();
 
     slider();
-
-    
 
 });
 
@@ -103,7 +100,7 @@ function navegacionResponsive(){
     navegacion.classList.toggle('mostrar');
 }
 
-function sliderHeader() {
+function header(){
     const headerInicio = document.querySelector('.inicio');
     headerInicio.style.backgroundImage = "url('/build/img/header2.jpeg')";
 
