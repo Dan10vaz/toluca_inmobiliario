@@ -1,13 +1,8 @@
-serviceWorker();
 document.addEventListener('DOMContentLoaded', function() {
-
     eventListeners();
-  
     darkMode();
-
     header();
-
-    slider();
+    serviceWorker();
 
 });
 
@@ -92,6 +87,8 @@ function darkMode(){
 function eventListeners(){
     const mobileMenu = document.querySelector('.mobile-menu');
     mobileMenu.addEventListener('click', navegacionResponsive);
+
+    
 }
 
 function navegacionResponsive(){
@@ -117,3 +114,5 @@ function header(){
         headerInicio.style.backgroundImage = "url('/build/img/header2.jpeg')";
      }, 20000);
 }
+
+slider();

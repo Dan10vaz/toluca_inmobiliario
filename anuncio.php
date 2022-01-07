@@ -30,10 +30,10 @@
         
         <div class="contenedor-slider">
             <div class="slider" id="slider">
-                <div class="slider__section"><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="Primera" class="slider__img"></div>
-                <div class="slider__section"><img src="build/img/anuncio2.jpg" alt="Segunda" class="slider__img"></div>
-                <div class="slider__section"><img src="build/img/anuncio3.jpg" alt="Tercera" class="slider__img"></div>
-                <div class="slider__section"><img src="build/img/anuncio4.jpg" alt="Cuarta" class="slider__img"></div>
+                <div class="slider__section"><img height="600" width="800" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="Primera" class="slider__img"></div>
+                <div class="slider__section"><img height="600" width="800" src="build/img/anuncio2.jpg" alt="Segunda" class="slider__img"></div>
+                <div class="slider__section"><img height="600" width="800" src="build/img/anuncio3.jpg" alt="Tercera" class="slider__img"></div>
+                <div class="slider__section"><img height="600" width="800" src="build/img/anuncio4.jpg" alt="Cuarta" class="slider__img"></div>
             </div>
             <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
             <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>

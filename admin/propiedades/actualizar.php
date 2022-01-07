@@ -4,7 +4,7 @@
     $auth =  estaAutenticado();
 
     if(!$auth) {
-        header('Location: /');
+        header('Location: ../index.php');
     }
 
 //Validar la  URL por ID valido

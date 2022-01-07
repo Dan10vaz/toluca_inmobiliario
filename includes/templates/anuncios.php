@@ -17,7 +17,7 @@
     <div class="card">
         <picture>
            
-            <img loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="anuncio">
+            <img loading="lazy" height="350" width="350" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="anuncio">
         </picture>
 
         <div class="contenido-card">
