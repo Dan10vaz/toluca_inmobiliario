@@ -87,8 +87,6 @@ function darkMode(){
 function eventListeners(){
     const mobileMenu = document.querySelector('.mobile-menu');
     mobileMenu.addEventListener('click', navegacionResponsive);
-
-    
 }
 
 function navegacionResponsive(){
@@ -115,4 +113,3 @@ function header(){
      }, 20000);
 }
 
-slider();
