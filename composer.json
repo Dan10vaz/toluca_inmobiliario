@@ -1,12 +1,7 @@
 {
     "name": "gestoriadaniel/public_html",
-    "description": "grupoTolucaInmobiliario",
+    "description": "GrupoTolucaInmobiliario",
     "type": "project",
-    "autoload": {
-        "psr-4": {
-            "Gestoriadaniel\\PublicHtml\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "DanielGesto",
@@ -14,8 +9,8 @@
         }
     ],
     "require": {},
-    "autoLoad": {
-        "psr-4":{
+    "autoload": {
+        "psr-4": {
             "App\\" : "./classes"
         }
     }

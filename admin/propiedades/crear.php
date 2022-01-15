@@ -1,8 +1,11 @@
 <?php
 
-// base de datos 
+require '../../includes/app.php';
 
-require '../../includes/config/database.php';
+use App\Propiedad;
+
+estaAutenticado();
+
 $db = conectarDB();
 
 //Consultar para obtener los vendedores
@@ -22,6 +25,10 @@ $errores = [];
 //Ejecutar el codigo despues de que el usuario envia el formulario
  
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $propiedad = new Propiedad($_POST);
+
+    debuguear($propiedad);
     /* echo "<pre>";
     var_dump($_POST);
     echo "</pre>"; */
@@ -111,9 +118,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
-
-
-require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
 
@@ -160,7 +164,7 @@ incluirTemplate('header');
         <fieldset>
             <legend>Vendedor</legend>
 
-            <select name="vendedor">
+            <select name="vendedorId">
                 <option value="">-- Seleccione --</option>
                 <?php while($vendedor = mysqli_fetch_assoc($resultado)): ?>
                     <option <?php echo $vendedorId === $vendedor['id'] ? 'selected' : ''; ?> value="<?php echo $vendedor['id']; ?>"><?php echo $vendedor['nombre'] . " " . $vendedor['apellido']; ?></option>

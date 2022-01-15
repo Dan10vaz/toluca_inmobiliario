@@ -6,9 +6,7 @@
     if(!$id){
         header('location: /');
     }
-
-    //Importar la conexion
-    require 'includes/config/database.php';
+    require 'includes/app.php';
     $db = conectarDB();
     //Consultar la base de datos
     $query = "SELECT * FROM propiedades WHERE id = ${id}";
@@ -21,23 +19,14 @@
 
     $propiedad = mysqli_fetch_assoc($resultado);
 
-    require 'includes/funciones.php';
+  
     incluirTemplate('header');
 ?>
 
     <main class="contenedor seccion contenido-centrado">
         <h1><?php echo $propiedad['titulo'];?></h1>
-        
-        <div class="contenedor-slider">
-            <div class="slider" id="slider">
-                <div class="slider__section"><img height="600" width="800" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="Primera" class="slider__img"></div>
-                <div class="slider__section"><img height="600" width="800" src="build/img/anuncio2.jpg" alt="Segunda" class="slider__img"></div>
-                <div class="slider__section"><img height="600" width="800" src="build/img/anuncio3.jpg" alt="Tercera" class="slider__img"></div>
-                <div class="slider__section"><img height="600" width="800" src="build/img/anuncio4.jpg" alt="Cuarta" class="slider__img"></div>
-            </div>
-            <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
-            <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
-        </div>
+
+        <img src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="imagen propiedad">
 
         <div class="resumen-propiedad">
             <p class="precio">$<?php echo $propiedad['precio']; ?></p>
